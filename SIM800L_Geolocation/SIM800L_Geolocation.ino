@@ -24,7 +24,6 @@ String SIM800_send(String incoming) //Function to communicate with SIM800 module
     char letter = SIM800.read();
     result = result + String(letter); //combine char to string to get result
   }
-
   return result; //return the result
 }
 
@@ -119,7 +118,7 @@ void loop() {
       SIM800.println("AT+CMGF=1"); //Set the module in SMS mode
       delay(1000);
 
-      SIM800.println("AT+CMGS=\"09845350225\""); //Send SMS to this number
+      SIM800.println("AT+CMGS=\"09448517225\""); //Send SMS to this number
       delay(1000);
 
       SIM800.println(Link); // we have send the string in variable Link

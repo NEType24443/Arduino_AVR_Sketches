@@ -48,19 +48,19 @@ struct float32_t{
   
 };
 
-float32_t _32bitfloat = float32_t(uint32_t(23.232324)); 
+float32_t _32bitfloat = float32_t(float(23.232324)); 
 
 void setup() {
   Serial.begin(115200);
   pinMode(13, OUTPUT);
-  Serial  << "float value: " << 23.232324 << endl
+  Serial  << "float value: " << _FLOAT(23.232324,10) << endl
           << "uint32_t value: " << uint32_t(23.232324) << endl
-          << "_32bitfloat.f: " << _32bitfloat.f << endl;
-//        << "_32bitfloat.dw: " << _32bitfloat.dw << endl
-//        << "_32bitfloat.w: " << _32bitfloat.w << endl
-//        << "_32bitfloat.expbits: " << _32bitfloat.expbits << endl
-//        << "_32bitfloat.mantbits: " << _32bitfloat.mantbits << endl
-//        << "_32bitfloat.signbits: " << _32bitfloat.signbits << endl;
+          << "_32bitfloat.f: " << _32bitfloat.f << endl
+          << "_32bitfloat.dw: " << _32bitfloat.dw << endl
+          << "_32bitfloat.w: " << _32bitfloat.w << endl
+          << "_32bitfloat.expbits: " << _32bitfloat.expbits << endl
+          << "_32bitfloat.mantbits: " << _32bitfloat.mantbits << endl
+          << "_32bitfloat.signbits: " << _32bitfloat.signbits << endl;
 }
 
 void loop() {

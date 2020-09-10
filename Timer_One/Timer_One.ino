@@ -8,8 +8,8 @@ void setup() {
   TCCR1B = 0;
   TCNT1 = 0;
   OCR1A = 5000;
-  TCCR1B |= (1 << WGM12) | (1 << CS11) | (1 << CS10);
-  TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
+  TCCR1B |= (1 << WGM12) | (1 << CS11) | (1 << CS10); // Prescaler set to /128 ??
+  TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);  // Enable Capture Compare Interrupts
   DDRB = B00000001;
 }
 
